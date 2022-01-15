@@ -22,7 +22,7 @@ frappe.ui.form.ControlTextEditor = class ControlTextEditor extends frappe.ui.for
             plugins: [
               'autoresize', 'autolink', 'charmap', 'emoticons', 'fullscreen', 'help',
               'hr', 'image', 'imagetools', 'link', 'lists', 'paste', 'searchreplace',
-              'table', 'visualblocks', 'visualchars', 'wordcount',
+              'table', 'visualblocks', 'visualchars', 'wordcount', 'code',
             ],
             entity_encoding: 'raw',
             convert_urls: true,
