@@ -17,7 +17,7 @@ frappe.ui.form.ControlTextEditor = class ControlTextEditor extends frappe.ui.for
         this.quill_container = $('<div>').appendTo(this.input_area);
         tinymce.init({
             target: this.input_area,
-            toolbar: 'undo redo | formatselect styleselect fontsizeselect | bold italic underline strikethrough forecolor backcolor subscript superscript | alignleft aligncenter alignright alignjustify | bullist numlist table image | outdent indent | link hr removeformat | html fullscreen help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | html fullscreen help preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment | footnotes | mergetags help',
             fontsize_formats: '10px 11px 12px 14px 15px 16px 18px 24px 36px',
             plugins: [
               'autoresize', 'autolink', 'charmap', 'emoticons', 'fullscreen', 'help',
@@ -28,6 +28,8 @@ frappe.ui.form.ControlTextEditor = class ControlTextEditor extends frappe.ui.for
             convert_urls: true,
             content_css: false,
             toolbar_sticky: true,
+            promotion: false,
+            link_default_target: "_blank",
 
             setup: function(editor) {
                 that.editor_id = editor.id
