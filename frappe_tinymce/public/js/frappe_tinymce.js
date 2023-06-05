@@ -24,12 +24,13 @@ frappe.ui.form.ControlTextEditor = class ControlTextEditor extends frappe.ui.for
               'hr', 'image', 'imagetools', 'link', 'lists', 'paste', 'searchreplace',
               'table', 'visualblocks', 'visualchars', 'wordcount', 'code',
             ],
+            powerpaste_googledocs_import: 'prompt',
             entity_encoding: 'raw',
             convert_urls: true,
             content_css: false,
             toolbar_sticky: true,
             promotion: false,
-            link_default_target: "_blank",
+            link_default_target: '_blank',
 
             setup: function(editor) {
                 that.editor_id = editor.id
